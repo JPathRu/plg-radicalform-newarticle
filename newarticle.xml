@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension type="plugin" version="3.9" group="radicalform" method="upgrade">
 	<name>PLG_RADICALFORM_NEWARTICLE</name>
-	<creationDate>25/07/2020</creationDate>
+	<creationDate>29/07/2020</creationDate>
 	<author>Dmitry Rekun</author>
 	<authorEmail>d.rekuns@gmail.com</authorEmail>
 	<authorUrl>https://jpath.ru</authorUrl>
