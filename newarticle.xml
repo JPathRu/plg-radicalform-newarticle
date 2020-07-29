@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" version="3.9" group="radicalform" method="upgrade">
+	<name>PLG_RADICALFORM_NEWARTICLE</name>
+	<creationDate>25/07/2020</creationDate>
+	<author>Dmitry Rekun</author>
+	<authorEmail>d.rekuns@gmail.com</authorEmail>
+	<authorUrl>https://jpath.ru</authorUrl>
+	<copyright>(C) 2020 JPathRu. All rights reserved.</copyright>
+	<license>GNU General Public License version 3 or later; see LICENSE</license>
+	<version>1.0.0</version>
+	<description>PLG_RADICALFORM_NEWARTICLE_XML_DESCRIPTION</description>
+
+	<files>
+		<filename plugin="newarticle">newarticle.php</filename>
+		<folder>language</folder>
+	</files>
+
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field
+					name="form_id"
+					type="text"
+					label="PLG_RADICALFORM_NEWARTICLE_FIELD_FORM_ID_LABEL"
+					description="PLG_RADICALFORM_NEWARTICLE_FIELD_FORM_ID_DESCRIPTION"
+				/>
+				<field name="catid"
+					type="category"
+					required="1"
+					extension="com_content"
+					label="PLG_RADICALFORM_NEWARTICLE_FIELD_CATEGORY_LABEL"
+					description="PLG_RADICALFORM_NEWARTICLE_FIELD_CATEGORY_DESCRIPTION"
+				>
+				</field>
+				<field name="created_by"
+					type="user"
+					required="1"
+					label="PLG_RADICALFORM_NEWARTICLE_FIELD_AUTHOR_LABEL"
+					description="PLG_RADICALFORM_NEWARTICLE_FIELD_AUTHOR_DESCRIPTION"
+				/>
+				<field name="state"
+					type="list"
+					required="1"
+					label="PLG_RADICALFORM_NEWARTICLE_FIELD_STATE_LABEL"
+					description="PLG_RADICALFORM_NEWARTICLE_FIELD_STATE_DESCRIPTION"
+					class="chzn-color-state"
+					filter="int"
+					default="0"
+				>
+					<option value="0">JUNPUBLISHED</option>
+					<option value="1">JPUBLISHED</option>
+				</field>
+				<field
+					name="article_title"
+					type="text"
+					required="1"
+					label="PLG_RADICALFORM_NEWARTICLE_FIELD_ARTICLE_TITLE_LABEL"
+					description="PLG_RADICALFORM_NEWARTICLE_FIELD_ARTICLE_TITLE_DESCRIPTION"
+				/>
+				<field
+					name="article_text"
+					type="text"
+					required="1"
+					label="PLG_RADICALFORM_NEWARTICLE_FIELD_ARTICLE_TEXT_LABEL"
+					description="PLG_RADICALFORM_NEWARTICLE_FIELD_ARTICLE_TEXT_DESCRIPTION"
+				/>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

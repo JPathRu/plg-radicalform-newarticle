@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Radical Form - New Article" default="make" basedir=".">
+	<tstamp>
+		<format property="build.date" pattern="%Y-%m-%d" />
+	</tstamp>
+	<property name="directory" value="build" />
+	<property name="prefix" value="plg_radicalform" />
+	<property name="extension" value="newarticle" />
+	<property name="version" value="1.0.0" />
+	<target name="make-dev" description="Builds the extension release package for development testing.">
+		<echo msg="Deleting old development build." />
+		<delete quiet="yes">
+			<fileset dir="${directory}">
+				<include name="*" />
+			</fileset>
+		</delete>
+		<echo msg="Making the development ${extension} package." />
+		<mkdir dir="${directory}" />
+		<phingcall target="build">
+			<property name="version" value="dev" />
+		</phingcall>
+	</target>
+	<target name="make" description="Builds the extension release package for a version.">
+		<echo msg="Making the ${extension} package for version ${version}." />
+		<mkdir dir="${directory}" />
+		<phingcall target="build"></phingcall>
+	</target>
+	<target name="build" description="Builds the extension release package.">
+		<zip destfile="${directory}/${prefix}_${extension}_${version}.zip">
+			<fileset dir=".">
+				<include name="language/**" />
+				<include name="LICENSE" />
+				<include name="${extension}.*" />
+			</fileset>
+		</zip>
+	</target>
+</project>
