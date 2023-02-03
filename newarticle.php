@@ -117,6 +117,7 @@ class PlgRadicalformNewarticle extends CMSPlugin
 		$text  = !empty($data[$textName]) ? $data[$textName] : 'Dummy Text';
 
 		$article = [
+			'id'         => 0,
 			'title'      => $title,
 			'introtext'  => $text,
 			'catid'      => (int) $this->params->get('catid', 0),
