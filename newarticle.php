@@ -105,6 +105,7 @@ class PlgRadicalformNewarticle extends CMSPlugin
 		Form::addFormPath($contentPath . '/model/form');
 		Form::addFieldPath($contentPath . '/models/fields');
 		Form::addFieldPath($contentPath . '/model/field');
+		Form::addFormPath($contentPath . '/forms');
 
 		/** @var ContentModelArticle $model */
 		$model = BaseDatabaseModel::getInstance('Article', 'ContentModel');
