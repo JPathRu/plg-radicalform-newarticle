@@ -119,6 +119,7 @@ class PlgRadicalformNewarticle extends CMSPlugin
 		$article = [
 			'id'         => 0,
 			'title'      => $title,
+			'alias'      => '',
 			'introtext'  => $text,
 			'catid'      => (int) $this->params->get('catid', 0),
 			'state'      => (int) $this->params->get('state', 0),
