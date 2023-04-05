@@ -105,6 +105,7 @@ class PlgRadicalformNewarticle extends CMSPlugin
 		Form::addFormPath($contentPath . '/model/form');
 		Form::addFieldPath($contentPath . '/models/fields');
 		Form::addFieldPath($contentPath . '/model/field');
+		Form::addFormPath($contentPath . '/forms');
 
 		/** @var ContentModelArticle $model */
 		$model = BaseDatabaseModel::getInstance('Article', 'ContentModel');
@@ -112,11 +113,13 @@ class PlgRadicalformNewarticle extends CMSPlugin
 		$titleName = trim($this->params->get('article_title'));
 		$textName  = trim($this->params->get('article_text'));
 
-		$title = isset($data[$titleName]) ? $data[$titleName] : 'Dummy Title';
-		$text  = isset($data[$textName]) ? $data[$textName] : 'Dummy Text';
+		$title = !empty($data[$titleName]) ? $data[$titleName] : 'Dummy Title';
+		$text  = !empty($data[$textName]) ? $data[$textName] : 'Dummy Text';
 
 		$article = [
+			'id'         => 0,
 			'title'      => $title,
+			'alias'      => '',
 			'introtext'  => $text,
 			'catid'      => (int) $this->params->get('catid', 0),
 			'state'      => (int) $this->params->get('state', 0),
