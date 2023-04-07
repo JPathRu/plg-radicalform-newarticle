@@ -2,7 +2,7 @@
 /**
  * @package    Plg_Radicalform_NewArticle
  * @author     Dmitry Rekun <d.rekuns@gmail.com>
- * @copyright  Copyright (C) 2020 JPathRu. All rights reserved.
+ * @copyright  Copyright (C) 2020 - 2023 JPathRu. All rights reserved.
  * @license    GNU General Public License version 3 or later; see LICENSE
  */
 
