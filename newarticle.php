@@ -6,7 +6,7 @@
  * @license    GNU General Public License version 3 or later; see LICENSE
  */
 
-defined('_JEXEC') or die;
+\defined('_JEXEC') or die;
 
 use Joomla\CMS\Application\CMSApplication;
 use Joomla\CMS\Factory;
@@ -17,9 +17,9 @@ use Joomla\CMS\Plugin\CMSPlugin;
 use Joomla\Registry\Registry;
 
 Log::addLogger(
-	array('text_file' => 'plg_radicalform_newarticle.php'),
+	['text_file' => 'plg_radicalform_newarticle.php'],
 	Log::ALL,
-	array('plg_radicalform_newarticle')
+	['plg_radicalform_newarticle']
 );
 
 /**
@@ -55,7 +55,7 @@ class PlgRadicalformNewarticle extends CMSPlugin
 	protected $autoloadLanguage = true;
 
 	/**
-	 * Handles event when radical form sends data.
+	 * Handles event when Radical Form sends data.
 	 *
 	 * @param   array     $formInput  Form input.
 	 * @param   array     $input      Full input.
@@ -82,7 +82,7 @@ class PlgRadicalformNewarticle extends CMSPlugin
 		}
 		catch (Exception $e)
 		{
-			Log::add($e->getMessage(), JLog::ERROR, 'plg_' . $this->_type . '_' . $this->_name);
+			Log::add($e->getMessage(), Log::ERROR, 'plg_' . $this->_type . '_' . $this->_name);
 		}
 	}
 
@@ -94,7 +94,7 @@ class PlgRadicalformNewarticle extends CMSPlugin
 	 * @return  void
 	 *
 	 * @since   1.0
-	 * @throws  Exception
+	 * @throws  \Exception
 	 */
 	private function createArticle(array $data)
 	{
