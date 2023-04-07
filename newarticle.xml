@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension type="plugin" version="3.9" group="radicalform" method="upgrade">
 	<name>PLG_RADICALFORM_NEWARTICLE</name>
-	<creationDate>29/07/2020</creationDate>
+	<creationDate>07/04/2023</creationDate>
 	<author>Dmitry Rekun</author>
 	<authorEmail>d.rekuns@gmail.com</authorEmail>
 	<authorUrl>https://jpath.ru</authorUrl>
-	<copyright>(C) 2020 JPathRu. All rights reserved.</copyright>
+	<copyright>(C) 2020 - 2023 JPathRu. All rights reserved.</copyright>
 	<license>GNU General Public License version 3 or later; see LICENSE</license>
-	<version>1.0.0</version>
+	<version>1.0.1</version>
 	<description>PLG_RADICALFORM_NEWARTICLE_XML_DESCRIPTION</description>
 
 	<files>

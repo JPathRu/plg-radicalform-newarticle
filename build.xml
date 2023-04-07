@@ -6,7 +6,7 @@
 	<property name="directory" value="build" />
 	<property name="prefix" value="plg_radicalform" />
 	<property name="extension" value="newarticle" />
-	<property name="version" value="1.0.0" />
+	<property name="version" value="1.0.1" />
 	<target name="make-dev" description="Builds the extension release package for development testing.">
 		<echo msg="Deleting old development build." />
 		<delete quiet="yes">
